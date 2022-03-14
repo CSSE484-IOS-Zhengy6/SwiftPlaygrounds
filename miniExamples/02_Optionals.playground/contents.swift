@@ -36,15 +36,15 @@ var someOtherFloat: Float=implictlyUnwrappedOptionals
 
 
 let dave = "Dave"
-let number = 7 : Int?
+let number : Int? = 7
 
-var optionalThatIsNotNull : Float = Float(number)
+var optionalThatIsNotNull : Float = Float(number!)
 
 print(optionalThatIsNotNull)
 
 var optionalThatIsNull: Int? = Int(dave)
 print(optionalThatIsNull)
-//print("requiredFloat \(requiredFloat)")
+//print("requiredFloat \(requiredFloat)")#fileLiteral(resourceName: "03_Collections.playground")
 
 // Optionals with forced unwrapping
 
@@ -69,14 +69,14 @@ b.setTitle("Press Me", for: UIControl.State.normal)
 print(b.titleLabel)
 print(b.titleLabel!.text)
 //optional chaining. If this exist, keep going, if not abandon ship.
-print(b.titleLabel?.text)
+print(b.titleLabel?.text )
 //Hey I know this is a label and it definitely has text that is not null.
 print(b.titleLabel!.text!)
 
 
 // Optional Binding
-if Int(number) != nil{
-    print("Temp varaible exist")
+if let tempVariable=number{
+    print("Temp varaible exist \(tempVariable)")
 }else{
     
 }

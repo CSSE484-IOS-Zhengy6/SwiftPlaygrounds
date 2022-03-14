@@ -3,9 +3,9 @@ import UIKit
 // Basics for arrays
 var names = ["Dave", "Kristy", "McKinley", "Keegan", "Bowen", "Neala"]
 
-names[1]
-names[2]="kinsley"
-names
+
+
+
 
 
 
@@ -14,11 +14,15 @@ names
 
 // Appending values
 
-names.append("Dubhlian")
-names.append("Fionn")
-if names.contains("Dave"){
-    print("Dave is present")
-}
+
+
+
+
+
+
+
+
+
 
 
 // So, so, SO.. many things you could do with arrays...
@@ -50,6 +54,3 @@ var tuple = ("item1", "item2", "item3", "item4")
 tuple.2
 var namedTuple = (first : "Dave", last : "Fisher")
 namedTuple.last
-
-
-
