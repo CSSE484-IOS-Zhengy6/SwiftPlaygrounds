@@ -2,6 +2,7 @@ var values = [10, 5, 2, 8, 3, 6, 1, 1000]
 
 // Verbose Closure
 var numValuesOver5=values.reduce(0, {(runningTotal: Int, currentValue : Int) ->Int in
+    //print(runningTotal)
     return currentValue>5 ? runningTotal+1 : runningTotal
 })
 
@@ -35,14 +36,18 @@ numValuesOver5=values.reduce(0) {
 
 
 
+func numValuesOverLimit(_ values : [Int], limit : Int) -> Int {
+    
+        values.reduce(0) {(runningTotal, currentValue) in
+            
+            //this reference to the limit is a closure.
+            return currentValue>limit ? runningTotal+1 : runningTotal
+        }
+}
 
 
-
-
-
-
-//numValuesOverLimit(values, limit: 5)
-//numValuesOverLimit(values, limit: 9)
+numValuesOverLimit(values, limit: 5)
+numValuesOverLimit(values, limit: 9)
 
 
 // Comparing func and closure syntax
